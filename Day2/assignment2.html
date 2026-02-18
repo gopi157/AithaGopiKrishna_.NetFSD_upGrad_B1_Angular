@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Hospital Appointment System</title>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>CityCare Hospital</h1>
+    <p>Your Health, Our Priority</p>
+    <hr>
+</header>
+
+<!-- Main Content -->
+<main>
+
+<section>
+    <h2>Book an Appointment</h2>
+
+    <form autocomplete="on">
+
+        <table cellpadding="8">
+
+            <!-- Patient Name -->
+            <tr>
+                <td><label for="name">Full Name</label></td>
+                <td>
+                    <input type="text" id="name" required>
+                </td>
+            </tr>
+
+            <!-- Age -->
+            <tr>
+                <td><label for="age">Age</label></td>
+                <td>
+                    <input type="number" id="age" min="1" max="110" required>
+                </td>
+            </tr>
+
+            <!-- Phone -->
+            <tr>
+                <td><label for="phone">Phone Number</label></td>
+                <td>
+                    <input type="tel"
+                           id="phone"
+                           pattern="[0-9]{10}"
+                           title="Enter exactly 10 digits"
+                           required>
+                </td>
+            </tr>
+
+            <!-- Email -->
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td>
+                    <input type="email" id="email" required>
+                </td>
+            </tr>
+
+            <!-- Department -->
+            <tr>
+                <td><label for="department">Department</label></td>
+                <td>
+                    <input type="text"
+                           id="department"
+                           list="departments"
+                           placeholder="Select Department"
+                           required>
+
+                    <datalist id="departments">
+                        <option value="Cardiology">
+                        <option value="Neurology">
+                        <option value="Orthopedics">
+                        <option value="Dermatology">
+                        <option value="Pediatrics">
+                        <option value="General Medicine">
+                    </datalist>
+                </td>
+            </tr>
+
+            <!-- Doctor -->
+            <tr>
+                <td><label for="doctor">Preferred Doctor</label></td>
+                <td>
+                    <input type="text"
+                           id="doctor"
+                           list="doctors"
+                           placeholder="Select or Enter Doctor Name"
+                           required>
+
+                    <datalist id="doctors">
+                        <option value="Dr. Sharma">
+                        <option value="Dr. Reddy">
+                        <option value="Dr. Mehta">
+                        <option value="Dr. Priya">
+                        <option value="Dr. Amrutha">
+                    </datalist>
+                </td>
+            </tr>
+
+            <!-- Appointment Date -->
+            <tr>
+                <td><label for="date">Appointment Date</label></td>
+                <td>
+                    <input type="date"
+                           id="date"
+                           min="2026-01-01"
+                           required>
+                </td>
+            </tr>
+
+            <!-- Appointment Time -->
+            <tr>
+                <td><label for="time">Appointment Time</label></td>
+                <td>
+                    <input type="time"
+                           id="time"
+                           required>
+                </td>
+            </tr>
+
+            <!-- Emergency -->
+            <tr>
+                <td>Emergency Case</td>
+                <td>
+                    <input type="checkbox"
+                           id="emergency">
+                    <label for="emergency">Yes</label>
+                </td>
+            </tr>
+
+            <!-- Upload Reports -->
+            <tr>
+                <td><label for="reports">Upload Medical Reports</label></td>
+                <td>
+                    <input type="file"
+                           id="reports"
+                           multiple>
+                </td>
+            </tr>
+
+            <!-- Submit -->
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Book Appointment">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <hr>
+    <p>Address: HitechCity, Hyderabad, Telangana</p>
+    <p>Phone: +91 9665432100</p>
+    <p>Email: contact@citycarehospital.com </p>
+     <p>&copy; 2026 CityCare Hospital. All Rights Reserved.</p>

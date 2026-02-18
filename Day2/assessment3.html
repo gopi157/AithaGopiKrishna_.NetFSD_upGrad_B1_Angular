@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Learning Course Registration</title>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>SkillUp Certification Portal</h1>
+    <p>Enhance Your Skills with Industry Experts</p>
+    <hr>
+</header>
+
+<!-- Main Content -->
+<main>
+
+    <!-- Introduction Video Section -->
+    <section>
+        <h2>Course Introduction Video</h2>
+
+        <video width="500" controls>
+            <source src="intro-video.mp4" type="video/mp4">
+            <source src="intro-video.webm" type="video/webm">
+
+            <!-- Subtitles -->
+            <track src="subtitles.vtt"
+                   kind="subtitles"
+                   srclang="en"
+                   label="English">
+
+            Your browser does not support the video tag.
+        </video>
+
+        <p>Please watch the introduction video before enrolling.</p>
+    </section>
+
+    <hr>
+
+    <!-- Registration Form Section -->
+    <section>
+        <h2>Course Registration Form</h2>
+
+        <form autocomplete="on">
+
+            <table cellpadding="8">
+
+                <!-- Full Name -->
+                <tr>
+                    <td><label for="name">Full Name</label></td>
+                    <td>
+                        <input type="text"
+                               id="name"
+                               required>
+                    </td>
+                </tr>
+
+                <!-- Email -->
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td>
+                        <input type="email"
+                               id="email"
+                               required>
+                    </td>
+                </tr>
+
+                <!-- Course Selection (Auto Suggestion) -->
+                <tr>
+                    <td><label for="course">Select Course</label></td>
+                    <td>
+                        <input type="text"
+                               id="course"
+                               list="courses"
+                               placeholder="Choose Course"
+                               required>
+
+                        <datalist id="courses">
+                            <option value="Full Stack Web Development">
+                            <option value="Java Programming">
+                            <option value="Data Science">
+                            <option value="Cyber Security">
+                            <option value="Cloud Computing">
+                            <option value="Artificial Intelligence">
+                        </datalist>
+                    </td>
+                </tr>
+
+                <!-- Batch Month -->
+                <tr>
+                    <td><label for="batch">Select Batch Month</label></td>
+                    <td>
+                        <input type="month"
+                               id="batch"
+                               required>
+                    </td>
+                </tr>
+
+                <!-- Session Timing -->
+                <tr>
+                    <td><label for="session">Preferred Session Timing</label></td>
+                    <td>
+                        <input type="time"
+                               id="session"
+                               required>
+                    </td>
+                </tr>
+
+                <!-- Skill Rating -->
+                <tr>
+                    <td><label for="skill">Rate Your Skill Level (1-10)</label></td>
+                    <td>
+                        <input type="range"
+                               id="skill"
+                               min="1"
+                               max="10"
+                               value="5">
+                    </td>
+                </tr>
+
+                <!-- Enrollment Progress -->
+                <tr>
+                    <td>Enrollment Progress</td>
+                    <td>
+                        <progress value="60" max="100"></progress>
+                        <span>60%</span>
+                    </td>
+                </tr>
+
+                <!-- Submit -->
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Enroll Now">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <hr>
+    <p>Contact: support@skillup.com</p>
+    <p>&copy; 2026 SkillUp Learning Platform. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

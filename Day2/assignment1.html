@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <header style="border:2px solid black;">
+        <h1>CodeWave Technologies</h1>
+        
+    </header>
+    <nav style="border:2px solid black;">
+        <ul style= "display:inline-flex;gap:50px; list-style: none;" >
+        <li><a href="#about">About</a></li>
+       <li><a href="#services">Services</a></li> 
+        <li><a href="#testimon">Testimonials</a></li>
+         <li><a href="#newsletter">NewsLetter</a></li> 
+        </ul>
+    </nav>
+
+    <main style="border:2px solid black;">
+
+        <section id="intro-video">
+        <h2>Company Introduction Video</h2>
+
+         <video width="500"
+            controls
+            poster="poster.jpg">
+
+         <source src="company-video.mp4" type="video/mp4">
+         <source src="company-video.webm" type="video/webm">
+
+         Your browser does not support the video tag.
+         </video>
+
+</section>
+          <section>
+            <audio autoplay loop>
+          <source src="background.mp3" type="audio/mpeg">
+           <source src="background.ogg" type="audio/ogg">
+          Your browser does not support the audio element.
+             </audio>
+
+          </section>
+
+        <section id="about">
+            <h1>About</h1>
+            <p>
+            TechNova Solutions is a leading IT services company dedicated to delivering innovative digital solutions.
+           <br> We specialize in building scalable web applications, mobile apps, and cloud-based systems.
+           <br> Our mission is to empower businesses through technology and help them achieve digital excellence.
+           <br> With a team of skilled developers and designers, we ensure high-quality solutions tailored to client needs.
+            </p>
+        </section>
+
+        <section id="services">
+            <h1>Our Services</h1>
+           <article>
+            <h3>1.Web Development</h3>
+            <p>
+                We create responsive, secure, and high-performance websites using modern technologies.
+                <br>Our websites are optimized for speed, scalability, and user experience.
+
+            </p>
+            </article>
+            
+            <article>
+            <h3>2.Mobile App Development</h3>
+            <p>
+            We develop Android and iOS applications with intuitive designs and powerful functionality.
+           <br> Our apps help businesses connect with customers anytime, anywhere.
+            </p>
+            </article>
+
+            <article>
+            <h3>3.Cloud Solutions</h3>
+            <p>
+            We provide cloud migration and cloud-based application development services.
+            <br>Our cloud solutions ensure security, flexibility, and cost efficiency for businesses.
+            </p>
+            </article>
+        </section>
+        <section id="testimon">
+        <h2>4.Testimonials: What Our Clients Say</h2>
+        <p>
+            "CodeWave Solutions transformed our business with a modern and scalable website.
+           <br> Their team was professional, supportive, and delivered on time."
+–            Sachin Kumar,CEO,GK Enterprises.
+        </p>
+        </section>
+
+        
+
+    <section id="newsletter">
+    <h2>Subscribe to our Newsletter</h2>
+    <p>Stay updated with our latest services</p>
+
+    <form autocomplete="on">
+
+        <table cellpadding="8" align="center" border="2">
+
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td>
+                    <input type="email"
+                           id="email"
+                           placeholder="Enter your email"
+                           required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="contacttime">Preferred Contact Time</label></td>
+                <td>
+                    <input type="time"
+                           id="contacttime"
+                           required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="service">Select Service</label></td>
+                <td>
+                    <input type="text"
+                           id="service"
+                           list="list_of_services"
+                           placeholder="Choose a service"
+                           required>
+
+                    <datalist id="list_of_services">
+                        <option value="Web Development">
+                        <option value="Mobile App Development">
+                        <option value="Cloud Solutions">
+                    </datalist>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Subscribe">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+ </section>
+
+
+        </section>
+    </main>
+     <br><br>
+    <footer style="border:2px solid black"> <span>For More Infomation Contact</span> <br>
+        Address: Gachibowli, Hyderabad, Telangana, India  
+         Phone: +91 9876543210  
+         Email: info@codewavetechnologies.com  
+         &copy; 2026 CodeWave Solutions. All Rights Reserved.
+
+    </footer>
+    </center>
+</body>
+</html>
