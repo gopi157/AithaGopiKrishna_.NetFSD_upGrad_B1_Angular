@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+   
+</head>
+<body>
+    <form action="">
+  <label for="name">Name</label> 
+  <input type="text" id="name" placeholder="Enter Name"> <br> <br>
+  <span id="errName" style="color:red"></span>
+
+  <label for="Email">Email</label>
+  <input type="text" id="em" placeholder="Enter Email"> <br> <br>
+  <span id="errEmail" style="color:red"></span>
+
+  <label for="age">Age</label>
+  <input type="number" id="age" placeholder="Enter Age"> 
+  <span id="errAge" style="color:red"></span>
+
+  <button type="button" onclick="Validate()">Submit</button>
+</form>
+  
+<script>
+      function Validate(){
+         // Clear previous errors
+          document.getElementById('errName').innerText="";
+          document.getElementById('errEmail').innerText="";
+          document.getElementById('errAge').innerText="";
+
+      if(!validateName()){
+        document.getElementById('errName').innerText='Name should contain only aplhapbets';
+      }
+      if(!validateEmail()){
+         document.getElementById('errEmail').innerText='Invaid Email ID';
+      }
+       
+      if(!validateAge()){
+         document.getElementById('errAge').innerText='Invaid Age should be above 18';
+      }
+     
+      function validateName(){
+       let name= document.getElementById('name').value;
+           let pattern= /^[a-zA-Z ]{2,30}$/;
+           return pattern.test(name);
+           
+      }
+
+      function validateEmail(){
+       let email= document.getElementById('em').value;
+       let pattern='^[a-zA-Z]{1}[a-zA-z0-9.]+@[a-z]{2,8}[.]{1}[a-z]{2,3}$';
+       let Regx= new RegExp(pattern);
+           let result= Regx.test(email);
+           return result;
+      }
+
+      
+      function validateAge(){
+
+      let age= document.getElementById('age').value;
+      age=parseInt(age);  //convert string into number
+
+      if(age<18){
+         return false
+      }
+      else{
+        return true;
+      }
+       
+      }
+  }
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="div1" style="color:red"> </div> 
+  <button id="demo" onclick="displayStudentProfile(student)">Display Student Data</button>
+  <button id="btn1" onclick="updateStudentProfile(student)">updateStudentProfile</button>
+  <button id="btn2" onclick="updateStudentMarks(student)">updateStudentMarks</button>
+  <p id="updatemarks" style="color:red"></p>
+  <p id="p2" style="color:red"></p>
+  <script>
+    let student={
+        name:'Gopi Krishna',
+        rollNo:61,
+        marks:80
+    }
+
+    function displayStudentProfile(student){
+        document.getElementById('div1').innerText=`Name: ${student.name}
+         RollNo:${student.rollNo}
+        Marks:${student.marks}`
+    }
+
+   function updateStudentProfile(student){
+    let input=document.createElement('input');
+      input.type='text';
+      input.id='sname';
+      input.placeholder='Enter new name';
+
+      document.body.appendChild(input);
+
+      let input2=document.createElement('input');
+      input2.type='text';
+      input2.id='sname';
+      input2.placeholder='Enter new marks';
+
+      document.body.appendChild(input2);
+
+      let button1=document.createElement('button');
+      button1.id='btn1';
+      button1.innerHTML='updateStudentProfile';
+
+      document.body.appendChild(button1);
+
+      
+
+       button1.addEventListener('click',()=>{
+
+         student.name=input.value;
+         student.marks=input2.value;
+
+        document.getElementById('p2').innerText=`Updated Name:${student.name} 
+         Updated Marks:${student.marks}`;
+
+        
+      })
+
+        
+
+   }
+
+   function updateStudentMarks(student){
+      let new_marks=75;
+
+      //let current_marks=student.marks;
+
+      student.marks=new_marks;
+
+      document.getElementById('updatemarks').innerText=`Updated marks of student:${student.marks}`
+
+   }
+  </script>
+</body>
+</html>

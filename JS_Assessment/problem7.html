@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Js!!</h1>
+    <button id="btn1" onclick="displayUserInfo(emp)">Click Here</button>
+    <p style="color:red" id="p1"></p>
+    <p id="p2" style="color:red"></p>
+    <p id="p3" style="color:red"></p>
+    <script>
+        let emp={
+            name:'Gopi Krishna',
+            age:23,
+            city:'Hyderabad',
+            userInfo:()=>{
+                console.log(`Name:${emp.name}, Age:${emp.age}, City:${emp.city}`);
+            }
+        }
+        console.log(emp.name);
+        console.log(emp.userInfo());
+
+
+        // Function that accepts object as parameter
+        function displayUserInfo(empObj){
+    
+         let p1=document.getElementById('p1').innerText='Name:'+empObj.name;
+         let p2=document.getElementById('p2').innerText='Age:'+empObj.age;
+         let p3=document.getElementById('p3').innerText='City:'+empObj.city;
+          
+         
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button{
+            text-align: center;
+            width:150px;
+            margin:30px;
+            color:white;
+            cursor:pointer;
+            background-color: black;
+        }
+        button#btn1:hover{
+          background-color: black;
+        }
+    </style>
+</head>
+<body>
+ <h1>Writing Notes</h1>
+ <textarea name="" id="notes" cols="80" rows="14"></textarea>   <br>
+ <button id="btn1" onclick="saveNotes()">SaveNotes</button>
+ <button id="btn2" onclick="readNotes()">ReadNotes</button>
+ <button id="btn3" onclick="clearNotes()">Clear</button>
+ <p id="read" style="color:red;size:24px"></p>
+
+ <script>
+        // Auto-load on page refresh
+      window.onload = function () {
+        let storedNote = localStorage.getItem('note');
+        if (storedNote !== null) {
+            document.getElementById('read').innerText = storedNote;
+            document.getElementById('notes').value = storedNote;
+        }
+    };
+
+     function saveNotes(){
+       let note=document.getElementById('notes').value;
+      if(note !==""){
+       
+       localStorage.setItem('note',note);
+       alert('notes data saved successfully');
+      }
+       else{
+        alert('Notes is empty..Write notes to save')
+       }
+
+     }
+
+      function readNotes(){
+        let noteData=localStorage.getItem('note');
+        document.getElementById('read').innerText=noteData;
+      }
+    
+
+      function clearNotes(){
+       const notes= localStorage.getItem('note');
+         if(notes!==null){
+            //localStorage.clear();
+            localStorage.removeItem('note');
+            document.getElementById('read').innerText="";
+            document.getElementById('notes').value = "";
+            alert('Local Sotage is cleared')
+         }
+         else{
+            alert('There is no notes to be deleted..')
+         }
+    }
+ </script>
+</body>
+</html>
