@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="health.css">
+</head>
+<body>
+ <header id="header1">
+   <h1 style="background-color: yellow;">Srinivasa Clinical Center</h1>  <br>
+ <nav id="nav1">
+    <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#listofdoctor">Doctors Info</a></li>
+        <li><a href="#book_appointment">Book Appointment</a></li>
+        <li><a href="#address">Address</a></li>
+    </ul>
+ </nav> 
+ </header>
+ <main>
+    <section id="banner"> <br>
+        <h1>Your Health is our priority</h1> <br>
+        <p>At HealthyLife Clinic, we provide comprehensive and compassionate healthcare services for individuals and families. 
+       <br> Our experienced medical team is dedicated to ensuring your well-being with personalized care.
+</p>
+<aside>
+    <!-- <img src="./clinic.png" width="600" height="400"> -->
+</aside>
+    </section>
+
+    <section id="services">
+     <h1>Services Provides</h1>
+     <h3> 1.General Consultation</h3>
+     <p>Our experienced physicians provide thorough health check-ups and expert diagnosis for patients of all age groups.
+       <br> We focus on preventive care and early detection of health conditions.
+    </p> <br>
+   <h3>2.Dental Care</h3>
+   <p>We offer complete dental services including routine cleaning, cavity treatment, and cosmetic dentistry.
+     <br>Our modern equipment ensures safe and painless treatment.
+    </p> <br>   
+   <h3>3.Laboratory Tests</h3>
+   <p>Our in-house laboratory provides accurate and fast diagnostic testing services.
+   <br>We ensure reliable reports to help doctors make informed medical decisions.
+   </p>
+    </section>
+
+    <section id="listofdoctor">
+        <h1 style="margin-top:20px;">Doctor Profile Section-Meet Our Specialist</h1> <br>
+        <h3>1.Dr. Ravi Kumar</h3> 
+        <p style="font-weight: bold;">Senior General Physician</p>
+        <p>Dr. Ravi Kumar is an experienced General Physician specializing in preventive healthcare and chronic disease management. 
+       <br>He is known for his patient-friendly approach and accurate diagnosis. 
+       <br>Dr. Ravi has successfully treated thousands of patients with dedication and care.
+       </p> <br>
+      <h3>2.Dr.Sneha Reddy</h3>
+      <p><b>Specialization: Dental Surgeon
+        Experience: 10+ Years</b></p>
+      <p>Dr. Sneha Reddy is a skilled Dental Surgeon providing advanced dental treatments including root canal therapy, cosmetic dentistry, and orthodontic care. 
+      <br>  She ensures painless and comfortable procedures using modern dental equipment.
+      </p> <br>
+      <h3>3.Dr.Arjun Mehta</h3>
+      <p><b>Specialization: Pathologist (Laboratory Specialist)
+          Experience: 12+ Years</b></p>
+      <p>Dr. Arjun Mehta is a certified Pathologist specializing in laboratory diagnostics and medical testing. 
+ <br>He oversees accurate analysis of blood tests, diagnostic reports, and health screenings to support effective medical treatment.
+   </p>
+    </section>
+
+    <section id="book_appointment">
+        <h1 style="margin-top:20px;">Book an appointment</h1> <br>
+        <p>Have questions or want to schedule an appointment?
+           Fill out the form below and our team will contact you shortly. 
+        </p> <br>
+        <form action="" autocomplete="on" >
+            <table>
+                <tr>
+                    <td>Patient Full Name</td>
+                    <td><input type="text" pattern="[A-Za-z]+"autofocus required ></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number</td>
+                    <td><input type="tel" pattern="[5-9]{1}[0-9]{9}" title="enter valid number" required></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email"  required></td>
+                </tr>
+                <tr>
+                    <td>Select Service</td>
+                    <td><input type="text" list="clinic_servies" required>
+                    <datalist id="clinic_servies">
+                        <option value="General Constant"></option>
+                        <option value="Dental"></option>
+                        <option value="Laboratory Test"></option>
+                    </datalist> </td>
+                </tr>
+                <tr>
+                    <td>Select Doctor</td>
+                    <td><select name="doctors" id="doctors" required>
+                        <option value="" hidden></option>
+                        <option value="Dr.Ravi Kumar">Dr.Ravi Kumar</option>
+                        <option value="Dr.Sneha Reddy">Dr.Sneha Reddy</option>
+                        <option value="Dr.Arjun Mehta">Dr.Arjun Mehta</option>
+                    </select></td>
+                </tr>
+
+                <tr>
+                    <td>Select Date</td>
+                    <td><input type="date" required></td>
+                </tr>
+                <tr>
+                    <td>Select Time</td>
+                    <td><input type="time" required></td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Book Appointment</button></td>
+                </tr>
+            </table>
+        </form>
+    </section>
+ </main> 
+ <footer id="address">
+    
+   <p > 
+    HealthyLife Clinic <br>
+   Address: Gachibowli, Hyderabad, Telangana <br>
+     Phone: +91 9876543210  <br>
+     Email: contact@healthylifeclinic.com <br>
+
+© 2026 HealthyLife Clinic. All Rights Reserved. <br>
+   </p>
+    
+
+ </footer>
+</body>
+</html>

@@ -1,0 +1,108 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+#header1>h1{
+    text-align: center;
+}
+
+
+main{
+    font-size:16px;
+}
+
+
+#nav1>ul{
+    display:flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size:17px;
+   
+}
+#nav1 a {
+    color: white;
+    text-decoration: none;
+    
+}
+#nav1{
+    background-color: black;
+    height:50px;
+    padding:12px;
+    margin-top:-16px;
+}
+
+#nav1 a:hover{
+    color:yellow;
+    
+}
+footer{
+    border: 2px solid black;
+    margin-top:0px;
+    background-color: black;
+    color:white;
+    text-align: center;
+    
+
+}
+
+#banner{
+background-image: url("clinic.png");
+ border:2px solid black;
+ background-size: cover;
+ height:660px;
+    
+}
+#services{
+border:2px solid black;
+height:270px;
+background-color: #f0f8ff;
+
+
+}
+#listofdoctor{
+    border:2px solid black;
+    height:380px;
+ 
+
+}
+
+#book_appointment{
+    border:2px solid black;
+    height:440px;
+  
+  
+
+
+}
+
+
+button{
+    width:200px;
+    padding: 3px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size:14px;
+    margin-left:65px;
+
+}
+
+button:hover{
+  background-color: black;
+  color:white;
+  
+}
+
+table{
+    border:2px solid black;
+    margin-left:100px;
+    width:490px;
+    height:324px;
+}
+
+tr,td{
+    line-height: 30px;
+    
+}
+
