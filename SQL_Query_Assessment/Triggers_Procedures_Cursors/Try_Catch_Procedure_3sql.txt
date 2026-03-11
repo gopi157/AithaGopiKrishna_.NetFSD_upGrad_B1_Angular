@@ -1,0 +1,33 @@
+CREATE PROCEDURE sp_InsertMarks
+    @StudentId INT,
+    @ExamId INT,
+    @MarksObtained INT
+AS
+BEGIN
+
+    BEGIN TRY
+
+        IF @MarksObtained < 0 OR @MarksObtained > 100
+        BEGIN
+            RAISERROR('Invalid Marks',16,1)
+            RETURN
+        END
+
+        INSERT INTO Marks2 (StudentId, ExamId, MarksObtained)
+        VALUES (@StudentId, @ExamId, @MarksObtained)
+
+        PRINT 'Marks inserted successfully'
+
+    END TRY
+
+    BEGIN CATCH
+
+        PRINT ERROR_MESSAGE()
+
+    END CATCH
+
+END
+
+EXEC sp_InsertMarks 5,6,85
+
+select * from marks2
